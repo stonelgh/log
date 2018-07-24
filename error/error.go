@@ -1,11 +1,12 @@
 package error
 
+// TODO: collect error codes of Linux and Windows
 const (
 	ErrOK        = 0
-	ErrUndefined = 10000 + iota
-	ErrFormat
-	ErrTimeout
-	ErrUnknown = 9999
+	ErrUnknown   = 9999
+	ErrUndefined = 10000
+	ErrFormat    = 10001
+	ErrTimeout   = 10002
 )
 
 type Error struct {

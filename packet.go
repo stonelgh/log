@@ -80,7 +80,6 @@ var handlers = make(map[int]*Handler)
 func init() {
 	handlers[ReqTypeSetProbe] = &Handler{ReqTypeSetProbe, reflect.TypeOf(ReqSetProbe{}), handleSetProbe}
 	handlers[ReqTypeGetProbes] = &Handler{ReqTypeGetProbes, reflect.TypeOf(ReqGetProbes{}), handleGetProbes}
-	fmt.Println("ErrOK=", ErrOK, "ErrUnknown=", ErrUnknown, "ErrUndefined=", ErrUndefined, "ErrFormat=", ErrFormat)
 }
 
 func handleRequest(head, body []byte) (*Response, *Error) {
